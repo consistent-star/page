@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" type="image/x-icon" href="pictures/logo1.png">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		#nav{
+			background-color: white;
+			font-size: 17px;
+			position: fixed;
+			z-index: 10;
+			width: 100%;
+			height: 56px;
+			border-bottom:1px solid rgb(240,240,240);
+			margin: 0px;
+			padding: 0px;
+			top: 0px;
+		}
+		.logo{
+			float: left;
+			width: 200px;
+			height: 112px;
+			position: absolute;
+			top: 0px;
+			left: 30px;
+		}
+		#far{
+			position: absolute;
+			top: 15px;
+			left: 1380px;
+			z-index: 1;
+			border-radius: 4px;
+		}
+		.btn-write-btn{
+			float: right;
+    		width: 85px;
+    		height: 40px;
+    		margin: 7px 55px 0px 10px;
+    		border-radius: 20px;
+    		font-size: 15px;
+    		color: #fff;
+    		padding: 0 15px 0 0;
+    		background-color: #EE6A50;
+    		text-align: right;
+    		text-decoration: none;
+    		line-height:40px;
+		}
+		.iconfont-ic-write{
+			color: white;
+			cursor: pointer;
+			font-size: 19px;
+			float: right;
+		}
+		#firstpage{
+			width: 113px;
+			height: 55px;
+			position: absolute;
+			top: 5px;
+			left: 275px;
+		}
+		#app{
+			width: 133px;
+			height: 53px;
+			position: absolute;
+			top: 3px;
+			left: 375px;
+		}
+		#search{
+			position: absolute;
+			top: 8px;
+			left: 500px;
+		}
+		#search-text{
+			border-radius: 20px;
+			width: 240px;
+			height: 30px;
+			background-color: rgb(238,238,238);
+			border-color: rgb(238,238,238);
+			color:#969696;
+			border:none;
+			box-sizing: border-box;
+			-webkit-transition: width 0.4s ease-in-out;
+     		transition: width 0.4s ease-in-out;
+     		padding: 20px;
+     		margin:0px 0px 0px 15px;
+		}
+		#search-text:focus{
+			width: 325px;
+			outline: none;
+		}
+		.glass{
+			position: absolute;
+			top: 10px;
+			left: 222px; 
+		}
+		.decide-Aa{
+			position: absolute;
+			top: -1px;
+			left: 1043px;
+			margin: 0px;
+			padding: 0px;
+		}
+		#login{
+			position: absolute;
+			top: 13px;
+			left: 1106px;
+			width: 100px;
+			height: 44px;
+		}
+		#login-in{
+			color: #969696;
+			position: absolute;
+			top: 15px;
+			left: 1198px;
+			font-size: 15px;
+		}
+		#login-box{
+			position: absolute;
+			top: -3px;
+			left: 1245px;
+			color: #ea6f5a;
+			border-radius: 20px;
+			border:1px solid  #ea6f5a;
+			width: 80px;
+			height: 38px;
+			font-size: 15px;
+			background-color: white;
+			text-align: center;
+			text-decoration: none;
+			line-height: 35px;
+			margin: 9px 5px 0px 15px;
+			cursor: pointer;
+		}
+		#catalog{
+			position: absolute;
+			top: 85px;
+			left: 960px;
+		}
+		.banner{
+			padding: 3px 0px 3px 0px;
+		}
+		#QR-code{
+			width: 230px;
+			height: 60px;
+			border-radius: 4px;
+			border:1px solid rgb(240,240,240);
+			padding: 10px 20px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		#QR-text1{
+			position: absolute;
+			top:75%;
+			left: 85px;
+			font-size: 15px;
+			padding: 0 0 0 10px;
+		}
+		#QR-text2{
+			position: absolute;
+			top: 85%;
+			left: 85px;
+			color:#999;
+			font-size: 12px;
+			padding: 0 0 0 10px;
+		}
+
+		.tooltiptext {
+    		visibility: hidden;
+    		width: 150px;
+    		height: 150px;
+    		background-color: white;
+    		border-radius: 6px;
+    		padding: 10px;
+    		position: absolute;
+    		top: 45px;
+    		left: 20%;
+    		z-index: 1;
+    		margin-left: -60px;
+    		border:1px solid rgb(240,240,240);
+		}
+		.tooltiptext::after {
+    		content:"";
+    		position: absolute;
+    		background-color: white;
+    		top: 100%;
+    		left: 50%;
+    		margin-left: -5px;
+    		border-width: 10px;
+    		border-style: solid;
+    		border-color:rgb(240,240,240) transparent transparent  transparent;
+		}
+		.tooltip:hover .tooltiptext {
+    		visibility: visible;
+		}
+		#right-log{
+			position: absolute;
+			padding: 30px 0 0 0 ;
+			width: 300px;
+			color: #999;
+			font-size: 14px;
+		}
+		#right-log-head-right{
+			position: absolute;
+			top: 30px;
+			left: 230px;
+			cursor: pointer;
+		}
+		#circle{
+			position: absolute;
+			top:30px;
+			left: 60px;
+			cursor: pointer;
+		}
+		#right-log-head-right:hover{
+			color: grey;
+		}
+		#authors{
+			position: absolute;
+			top: 450px;
+			left: 960px;
+			width: 280px;
+		}
+		.authors{
+			padding: 2px 0px;
+		}
+		.authors-p{
+			border-radius: 50%;
+			overflow: hidden;
+			border-width: 1px;
+			border-color: #999;
+			border-style: solid;
+			float: left;
+		}
+		.author-a{
+			float: right;
+			color: rgb(66,192,46);
+			font-size: 13px;
+			text-decoration: none;
+		}
+		.author-n{
+			float: left;
+			font-size: 14px;
+			text-decoration: none;
+			color: black;
+		}
+		.author-t{
+			font-size: 12px;
+			color: #999;
+		}
+		#author-bottom{
+			color:#999;
+			border:1px solid rgb(200,200,200);
+			background-color: rgb(250,250,250);
+			width: 280px;
+			height: 30px;
+			text-align: center;
+			font-size: 13px;
+			line-height: 30px;
+			border-radius: 4px;
+		}
+		#main{
+			position: absolute;
+			top: 85px;
+			left: 290px;
+		}
+		#box{
+			width: 625px;
+			height: 270px;
+			margin: 200px auto;
+			overflow: hidden;
+			position: absolute;
+			top: -200px;
+			border-radius: 4px;
+		}
+		#box > ul{
+			width: 200%;
+			list-style: none;
+			animation: imgMove 5s linear infinite;
+		}
+		#box > ul:hover{
+			animation-play-state: paused;
+		}
+		#box > ul > li{
+			width: 625px;
+			float: left;
+		}
+		#box img{
+			width: 100%;
+			height: 100%;
+		}
+		@keyframes imgMove {
+			from {
+				transform: translateX(0px);
+			}
+			to {
+				transform: translateX(-625px);
+			}
+		}
+		.main-text{
+			width: 625px;
+			position: absolute;
+			top:300px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text-diamond{
+			position: absolute;
+			top: 95px;
+			left: -200px;
+			cursor: pointer;
+		}
+		.main-text-light{
+			position: absolute;
+			top: 100px;
+			left: 140px;
+			z-index: 1;
+			cursor: pointer;
+
+		}
+		.main-text-light:hover{
+			visibility: hidden;
+		}
+		.main-text-deep{
+			position: absolute;
+			left: 140px;
+			top: 100px;
+			cursor: pointer;
+		}
+		.main-text-heart{
+			position: absolute;
+			top: 98px;
+			left: 190px;
+			cursor: pointer;
+		}
+		.head{
+			color: black;
+			font-size: 17px;
+			font-weight: 600;
+			text-decoration: none;
+		}
+		.head:hover{
+			text-decoration: underline;
+		}
+		.text{
+			color: #999;
+			font-size: 13px;
+			padding: 5px 0;
+		}
+		.text-p{
+			color: #999;
+			font-size: 13px;
+			padding: 5px 0;
+			width: 450px;
+		}
+		.orange{
+			position: absolute;
+			top: 99px;
+			left: 23px;
+			color: #ea6f5a;
+			font-size: 13px;
+			cursor: pointer;
+		}
+		.name{
+			position: absolute;
+			top: 99px;
+			left: 53px;
+			color: #999;
+			font-size: 13px;
+			cursor: pointer;
+		}
+		.name:hover{
+			color: grey;
+		}
+		.grey1{
+			position: absolute;
+			top: 99px;
+			left: 160px;
+			font-size: 13px;
+			color: #999;
+			cursor: pointer;
+		}
+		.grey1:hover{
+			color: grey;
+		}
+		.grey2{
+			position: absolute;
+			top: 99px;
+			left: 210px;
+			font-size: 13px;
+			color: #999;
+			cursor: pointer;
+		}
+		.main-guangkao{
+			width: 30px;
+			height: 20px;
+			color: #999;
+			border-radius: 4px;
+			border:1px solid #999;
+			position: absolute;
+			top: 95px;
+			left: 0px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.main-text1{
+			width: 625px;
+			position: absolute;
+			top:460px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text2{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text-p{
+			position: absolute;
+			top: 5px;
+			left: 450px;
+			cursor: pointer;
+			border-radius: 4px;
+		}
+		.main-text3{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text4{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text5{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text6{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text7{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text8{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text9{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text10{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text11{
+			width: 625px;
+			position: absolute;
+			top:320px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text12{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text13{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text14{
+			width: 625px;
+			position: absolute;
+			top:320px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text15{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text16{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text17{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text18{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text19{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text20{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text21{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text22{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		.main-text23{
+			width: 625px;
+			position: absolute;
+			top:160px;
+			border-bottom: 1px solid rgb(240,240,240);
+			height: 150px;
+		}
+		#bottom-button{
+			width: 600px;
+			height: 20px;
+			color: white;
+			background-color: #999;
+			border-radius: 50px;
+			text-align: center;
+			padding: 20px 0 0 40px;
+			position: absolute;
+			top: 320px;
+			left: 0px;
+			line-height: 0px;
+		}
+		.a-text{
+			color: #999;
+			font-size: 13px;
+			text-decoration: none;
+		}
+		.a-text:hover{
+			text-decoration: underline;
+		}
+		#bottom{
+			position: absolute;
+			top: 450px;
+			font-size: 12px;
+			color: rgb(200,200,200);
+			height: 200px;
+			width: 670px;
+		}
+		#bottom-text{
+			font-size: 12px;
+		}
+		#bottom-a{
+			color: rgb(200,200,200);
+			text-decoration: none;
+		}
+		#bottom-a:hover{
+			color: black;
+		}
+		.foot-top{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 600px;
+			left: 1400px;
+			border:1px solid rgb(200,200,200);
+			text-align: center;
+			font-size: 20px;
+			line-height: 50px;
+			position: fixed;
+			
+		}
+		.foot-top:hover{
+			background-color: rgb(250,250,250);
+		}
+		#foot-top-text{
+			color: #999;
+			text-decoration: none;
+		}
+		.tip{
+			visibility: hidden;
+    		width: 80px;
+    		background-color: black;
+    		color: #fff;
+    		border-radius: 6px;
+    		padding: 5px 0;
+    		line-height: 20px;
+    		position: absolute;
+    		z-index: 1;
+    		top: 10px;
+    		right: 110%;
+    		font-size: 14px;
+    		height: 20px;
+		}
+		.tip::after{
+			content: "";
+    		position: absolute;
+    		top: 50%;
+    		left: 100%;
+    		margin-top: -5px;
+    		border-width: 5px;
+    		border-style: solid;
+    		border-color: transparent transparent transparent black;
+		}
+		.foot-top:hover .tip{
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<div id ="nav">
+		<a href="#">
+			<div class="logo">
+			<img src="pictures/logo.png" width="50%" height="50%">
+			</div>
+		</a>
+		<div class=".iconfont-ic-write">
+			<a class="btn-write-btn" target="_blank" href="#">
+				写文章
+			</a>
+			<img id="far" src="pictures/far.png" width="25px" height="25px">
+		</div>
+		<div id="firstpage">
+			<img src="pictures/firstpage.png" width="80%" height="80%">
+		</div>
+		<div id="app">
+			<img src="pictures/app.png" width="80%" height="80%">
+		</div>
+		<div id="search">
+		<input id="search-text" type="text" name="search" placeholder="搜索">
+		<img class="glass" src="pictures/glass.png"  width="26px" height="26px">
+		</div>
+		<div id="decide">
+			<img class="decide-Aa" src="pictures/Aa.png" width="58px" height="48px">
+		</div>
+		<div id="login">
+			<img src="pictures/beta.png" width="57%" height="57%">
+		</div>
+		<div id="login-in">
+				登录
+		</div>
+		<a>
+			<div id="login-box">
+				注册
+			</div>
+		</a>
+	</div>
+	<div id="catalog">
+		<img src="pictures/banner4.png" width="49%" height="49%">
+		<div class="banner"><img src="pictures/banner3.png" width="49%" height="49%"></div>
+		<img src="pictures/banner1.png" width="49%" height="49%">
+		<div class="banner"><img src="pictures/banner2.png" width="49%" height="49%"></div>
+		<div id="QR-code" class="tooltip">
+			<img src="pictures/QR-code.png" width=60px height=60px>
+			<p id="QR-text1">下载简书手机App  ></p>
+			<p id="QR-text2">随时随地发现和创作内容</p>
+			<div class="tooltiptext"><img src="pictures/QR-code.png" width="150px" height="150px"></div>
+		</div>
+		<div id="right-log">
+			<div id="right-log-head">
+				<div id="right-log-head-left">推荐作者</div>
+				<img id="circle" src="pictures/circle.png" width="170px" height="25px">
+				<div id="right-log-head-right">换一批</div>
+			</div>
+		</div>
+	</div>
+	<div id="authors">
+		<div id="list">
+			<div class="authors">
+				<a>
+					<img class="authors-p" src="pictures/author1.webp" width="45px" height="45px">
+				</a>
+				<a class="author-n" href="#">卢璐说</a>
+				<a class="author-a" href="#">+关注</a>
+				<br  ><p class="author-t">写了1416.2k字·29.1k喜欢</p>
+			</div>
+			<div class="authors">
+				<a>
+					<img class="authors-p" src="pictures/author2.webp" width="45px" height="45px">
+				</a>
+				<a class="author-n" href="#">董克平日记</a>
+				<a class="author-a" href="#">+关注</a>
+				<br  ><p class="author-t">写了851k字·2.9k喜欢</p>
+			</div>
+			<div class="authors">
+				<a>
+					<img class="authors-p" src="pictures/author3.webp" width="45px" height="45px">
+				</a>
+				<a class="author-n" href="#">邓哲</a>
+				<a class="author-a" href="#">+关注</a>
+				<br  ><p class="author-t">写了422.1k字·1.3k喜欢</p>
+			</div>
+			<div class="authors">
+				<a>
+					<img class="authors-p" src="pictures/author4.webp" width="45px" height="45px">
+				</a>
+				<a class="author-n" href="#">简书钻首席小管家</a>
+				<a class="author-a" href="#">+关注</a>
+				<br  ><p class="author-t"> 写了265.8k字·163.1k喜欢</p>
+			</div>
+			<div class="authors">
+				<a>
+					<img class="authors-p" src="pictures/author5.webp" width="45px" height="45px">
+				</a>
+				<a class="author-n" href="#">梅拾璎</a>
+				<a class="author-a" href="#">+关注</a>
+				<br  ><p class="author-t">写了272.8k字·30.1k喜欢</p>
+			</div>
+			<div id="author-bottom">
+				查看全部 >
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<div id="box">
+			<ul>
+				<li><img class="picture" src="pictures/wuhan.png" width="625px" height="270px"></li>
+				<li><img class="picture" src="pictures/people.png" width="625px" height="270px"></li>
+				<li><img class="picture" src="pictures/wuhan.png" width="625px" height="270px"></li>
+				<li><img class="picture" src="pictures/people.png" width="625px" height="270px"></li>
+			</ul>
+		</div>
+		<div class="main-text">
+			<a class="head" href="#">代写奇迹</a>
+			<div class="text">
+				一个十三岁的孩子，在三十天的假期，靠帮助别人写作业，用自己妈妈的账号约定代写任务，挣了一万多元，这是不是一个代写奇迹。 可惜，这是不为人知的，如...
+			</div>
+			<div class="main-bottom">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">3.3</div>
+				<div class="name">consistent</div>
+				<div class="grey1">35</div>
+				<div class="grey2">29</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text1">
+			<a class="head" href="#">老师叫家长后</a>
+			<div class="text">
+				近日，看到儿子群里数学老师怒气冲冲地发话，要我和孩子爸爸带着孩子第二天7：50到她办公室里！ 看到这条信息，我就想这不知道又怎么了，又要叫家长了...
+			<div class="main-bottom">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">0.1</div>
+				<div class="name">眉心敏敏</div>
+				<div class="grey1">2</div>
+				<div class="grey2">15</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text2">
+			<a class="head" href="#">一个股票白痴的投资历程</a>
+			<div class="text-p">
+				今年开年后，所有股票基金都在疯长，连续一个多月，办公室同事谈到股票都喜上眉梢！ 时间回退一年前，则是完全相反的态势...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/gupiao.jpg" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">5.5</div>
+				<div class="name">咿呀小豆儿</div>
+				<div class="grey1">22</div>
+				<div class="grey2">34</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text3">
+			<a class="head" href="#">又一款开源手机要来了————Wiphone</a>
+			<div class="text-p">
+				开源中国此前曾多次报道过一款名为 Librem 5 的开源智能手机。相关内容： 开源智能手机 Librem 5 跳票了，推迟至第3季度发布开源自...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/wiphone.png" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">5.0</div>
+				<div class="name">OSC开源社区</div>
+				<div class="grey1">5</div>
+				<div class="grey2">26</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text4">
+			<a class="head" href="#">今天，同事辞职了</a>
+		<div class="text">
+				今天同事辞职了，原因很简单：上班迟到，没有提前请假，被领导训了一通，愤而请辞。其实我们一同来到这个单位，到今天也还不到半年，我劝他不要计较，...
+			<div class="main-bottom">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">44.8</div>
+				<div class="name">李小姐说吧</div>
+				<div class="grey1">87</div>
+				<div class="grey2">231</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text5">
+			<a class="head" href="#">vue + electron开发桌面应用</a>
+			<div class="text-p">
+				简介 electron 是一个可以使用 web 技术来创建跨平台原生桌面应用的框架。借助 electron ，我们可以使用纯 JavaScrip...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/vue.png" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">7.2</div>
+				<div class="name">Howie126313</div>
+				<div class="grey1">16</div>
+				<div class="grey2">64</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text6">
+			<a class="head" href="#">成功数据分析师，抢占互联网红利</a>
+			<div class="text-p">
+				师从硅谷名企，洞察数据秘密，成为互联网高薪人才！
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/shujushi.png" width="180px" height="120px">
+				<div class="main-guangkao">
+					广告
+				</div>
+			</div>
+		</div>
+		<div class="main-text7">
+			<a class="head" href="#">知道这些穿搭小诀窍，又可以每天多睡五分啦！</a>
+			<div class="text-p">
+				女生每天出门前都像打仗一样，除了刷牙洗脸化妆外，花最多时间的非挑衣服莫属了！想着想着就不小心错过几班公车了？这次要来告诉各位妹纸，关于懒人挑衣服...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/girl.jpg" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">1.3</div>
+				<div class="name">时髦精</div>
+				<div class="grey1">0</div>
+				<div class="grey2">13</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text8">
+			<a class="head" href="#">python 操作DB</a>
+			<div class="text-p">
+				//兼容2、3，使用Mysql,sqlite，gadfly //py2版本 !/usr/bin/env python import osfrom...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/python.png" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">2.1</div>
+				<div class="name">SkTj</div>
+				<div class="grey1">1</div>
+				<div class="grey2">21</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text9">
+			<a class="head" href="#">好用的技术写作工具</a>
+			<div class="text-p">
+				前几天才发现语雀这款应用原来是阮一峰老师团队在做的。之前在掘金一直看到有人在推荐语雀，奈何在国外注册不了。今天，在看了一个人的语雀的技术文档之后...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/yuque.png" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">7.7</div>
+				<div class="name">caoqi95</div>
+				<div class="grey1">6</div>
+				<div class="grey2">48</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text10">
+			<a class="head" href="#">Java高级工程师需要弄明白的20个知识点</a>
+			<div class="text">
+				一般的程序员或许只需知道一些JAVA的语法结构，能对数据库数据进行CRUD就可以应付了。但要成为JAVA(高级) 工程师，就要对JAVA做比较深...
+			</div>
+			<div class="main-bottom">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">35.9</div>
+				<div class="name">java高并发</div>
+				<div class="grey1">0</div>
+				<div class="grey2">38</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text11">
+			<a class="head" href="#">这可能是今年最值得推荐的数据分析工具！</a>
+			<div class="text-p">
+				数据分析时代早就已经来临，从国家政府到企业个人，”大数据“和”数据分析“已经变成大家耳熟能详的热词了。 但是你可能并不具备专业的数据分析知识和语...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/shuju.jfif" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">10.5</div>
+				<div class="name">帆软</div>
+				<div class="grey1">2</div>
+				<div class="grey2">106</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text12">
+			<a class="head" href="#">坚持跑步一年了，改变了我的人生？</a>
+			<div class="text-p">
+				估计大多数人跑步之初，都跟我当初似的。而更多的可能是减压、减脂、为了身体健康，长命百岁。可坚持了这么久却发现我改变的不仅仅是这些。 运动是件超酷...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/paobu.jpg" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">14.4</div>
+				<div class="name">小犬营养</div>
+				<div class="grey1">6</div>
+				<div class="grey2">73</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text13">
+			<a class="head" href="#">互联网红利期已结束！未来这五大领域才有机会</a>
+			<div class="text">
+				内容来源：WPR “未来十年，翻译、简单的新闻报道、保安、销售、客服等领域的人，将约有90%会被人工智能全部或部分取代。” 近日，创新工场董事长...
+			</div>
+			<div class="main-bottom">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">24.8</div>
+				<div class="name">沈海涛讲资本</div>
+				<div class="grey1">11</div>
+				<div class="grey2">204</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text14">
+			<a class="head" href="#">当画画成为一种习惯</a>
+			<div class="text-p">
+				最近画画松懈了很多，趁着周末休息，终于把画画给补齐了，赶上进度了。 画了很久的线稿也涂了色，马克笔上色，上色这块，依旧还是硬伤，得多练习上色。 ...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/draw.jpg" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">28.2</div>
+				<div class="name">胖希在路上</div>
+				<div class="grey1">49</div>
+				<div class="grey2">134</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text15">
+			<a class="head" href="#">日光倾城，暖了遍地流年</a>
+			<div class="text-p">
+				阳光透过朦胧的空气，倾泻在铁轨上我们的记忆那么绵长像铁轨一样没有尽头那时候总是有很多糖可以吃谁和谁好了 会发糖谁和谁分了 也会发糖谁过...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/sun.jpg" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">4.5</div>
+				<div class="name">琉筱璃</div>
+				<div class="grey1">1</div>
+				<div class="grey2">21</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text16">
+			<a class="head" href="#">成功数据分析师，抢占互联网红利</a>
+			<div class="text-p">
+				师从硅谷名企，洞察数据秘密，成为互联网高薪人才！
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/analyst.png" width="180px" height="120px">
+				<div class="main-guangkao">
+					广告
+				</div>
+			</div>
+		</div>
+		<div class="main-text17">
+			<a class="head" href="#">WTF——码农专属终端的仪表板</a>
+			<div class="text-p">
+				之前虫虫的文章中介绍过很多终端软件，也介绍过分屏神器Screen和Tmux但是毕竟他们使用配置有一点点的难度。那么有没有一款简单易用，界面美观的...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/code.jfif" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">4.3</div>
+				<div class="name">虫虫搜奇ccsearchit</div>
+				<div class="grey1">1</div>
+				<div class="grey2">45</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text18">
+			<a class="head" href="#">Postman高级用法</a>
+			<div class="text-p">
+				Postman在Web开发时非常好用，方便管理一系列的Restful API管理 基础功能 各种Restful API请求的发送与结果分析（不介...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/postman.png" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">13.6</div>
+				<div class="name">十毛tenmao</div>
+				<div class="grey1">8</div>
+				<div class="grey2">142</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text19">
+			<a class="head" href="#">高效使用VSCode的9点建议</a>
+			<div class="text-p">
+				小编推荐：Fundebug提供JS、微信小程序、微信小游戏，Node.js和Java错误监控。真的是一个很好用的错误监控费服务，众多大佬公司都在...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/vscode.png" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">21.1</div>
+				<div class="name">Fundebug</div>
+				<div class="grey1">8</div>
+				<div class="grey2">236</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text20">
+			<a class="head" href="#">Ubuntu PPA 使用指南</a>
+			<div class="text-p">
+				一篇涵盖了在 Ubuntu 和其他 Linux 发行版中使用 PPA 的几乎所有问题的深入的文章。 如果你一直在使用 Ubuntu 或基于 Ub...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/ubuntu.png" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">3.0</div>
+				<div class="name">Linux技术</div>
+				<div class="grey1">0</div>
+				<div class="grey2">26</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text21">
+			<a class="head" href="#">Android开发中关于摄像头方向的理解</a>
+			<div class="text-p">
+				安卓开发中经常有需要使用摄像头的应用场景，对于初次接触的同学摄像头的方向是一个比较难弄清楚的概念，开发时很容易处理不当，本文将详述该部分内容帮助...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/Android.png" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">6.6</div>
+				<div class="name">tsia</div>
+				<div class="grey1">8</div>
+				<div class="grey2">29</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+		<div class="main-text22">
+			<a class="head" href="#">从Python开学，构建你的神经网络</a>
+			<div class="text-p">
+				人工智能7天超值试学，小班辅导，一站式掌握AI红利！
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/python-p.png" width="180px" height="120px">
+				<div class="main-guangkao">
+					广告
+				</div>
+			</div>
+		</div>
+		<div class="main-text23">
+			<a class="head" href="#">程序员如何写一份更好的简历</a>
+			<div class="text-p">
+				01 引言 面试前要准备的第一件事就是写简历，从零开始写简历是一件痛苦的事，因为它既重要又耗时。现在就有很多求职者在电脑前急躁不安地搜索简历模版...
+			<div class="main-bottom">
+				<img class="main-text-p" src="pictures/item.jfif" width="180px" height="120px">
+				<img class="main-text-diamond" src="pictures/diamond.png" width="220px" height="30px">
+				<div class="orange">31.9</div>
+				<div class="name">程序员杂货铺</div>
+				<div class="grey1">21</div>
+				<div class="grey2">507</div>
+				<img class="main-text-light" src="pictures/textlight.png" width="15px" height="15px">
+				<img class="main-text-deep" src="pictures/text.png" width="15px" height="15px">
+				<img class="main-text-heart " src="pictures/heart.png" width="18px" height="18px">
+			</div>
+		</div>
+	</div>
+	<dir id="bottom-button">
+		阅读更多
+	</dir>
+	<div id="bottom">
+		<div id="a">
+			<a class="a-text" href="#">关于简书</a>·
+			<a class="a-text" href="#">联系我们</a>·
+			<a class="a-text" href="#">加入我们</a>·
+			<a class="a-text" href="#">简书出版</a>·
+			<a class="a-text" href="#">品牌与徽标</a>·
+			<a class="a-text" href="#">帮助中心</a>·
+			<a class="a-text" href="#">合作伙伴</a>
+		</div>
+		<div id="bottom-text">
+			©2012-2019 上海佰集信息科技有限公司 / 简书 / 沪ICP备11018329号-5 / 
+			<img src="pictures/safe.png" width="60px" height="30px">
+			<a id="bottom-a" href="#"> 沪公网安备31010402002252号 /</a>
+			<img src="pictures/e-mail.png" width="60px" height="30px">
+			简书网举报电话：021-34770013 / 
+			<img src="pictures/phone.jpg" width="35px" height="35px">
+			亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听 / 
+			<img src="pictures/police.png" width="20px" height="30px">
+		</div>
+	</div>
+	<div class="foot-top">
+		<a id="foot-top-text" href="#top">^</a>
+		<span class="tip">回到顶部</span>
+	</div>
+</body>
+</html>
